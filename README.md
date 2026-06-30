@@ -2,7 +2,7 @@
 
 A local, no-cost data engineering tool that validates vendor data feeds against YAML data contracts, detects schema drift, runs data quality checks, and generates rule-based impact summaries — with CLI, reporting, and a Streamlit dashboard.
 
-[![CI](https://github.com/bhavyareddy/ai-data-contract-guardian/actions/workflows/ci.yml/badge.svg)](https://github.com/bhavyareddy/ai-data-contract-guardian/actions/workflows/ci.yml)
+[![CI](https://github.com/allab2/ai-data-contract-guardian/actions/workflows/ci.yml/badge.svg)](https://github.com/allab2/ai-data-contract-guardian/actions/workflows/ci.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 [![Python 3.10+](https://img.shields.io/badge/python-3.10+-blue.svg)](https://www.python.org/downloads/)
 
@@ -112,7 +112,7 @@ See [docs/architecture.md](docs/architecture.md) for module-level detail.
 ## Quick start
 
 ```bash
-git clone https://github.com/bhavyareddy/ai-data-contract-guardian.git
+git clone https://github.com/allab2/ai-data-contract-guardian.git
 cd ai-data-contract-guardian
 
 python -m venv venv

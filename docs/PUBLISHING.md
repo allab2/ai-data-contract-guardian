@@ -30,7 +30,7 @@ If the repo name is already taken, pick another name and update badge URLs in `R
 After push, open:
 
 ```
-https://github.com/bhavyareddy/ai-data-contract-guardian/actions
+https://github.com/allab2/ai-data-contract-guardian/actions
 ```
 
 The CI workflow should run pytest and both Day 1 / Day 2 pipelines.
@@ -50,6 +50,6 @@ If you prefer the GitHub website:
 2. Run:
 
 ```bash
-git remote add origin https://github.com/bhavyareddy/ai-data-contract-guardian.git
+git remote add origin https://github.com/allab2/ai-data-contract-guardian.git
 git push -u origin main
 ```
