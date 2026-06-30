@@ -1,12 +1,18 @@
 # AI Data Contract & Schema Drift Guardian
 
-A local, no-cost data engineering tool that validates vendor data feeds against YAML data contracts, detects schema drift, runs data quality checks, and generates rule-based impact summaries — with CLI, reporting, and a Streamlit dashboard.
+**AI Data Contract & Schema Drift Guardian** is a local data engineering project that validates incoming vendor feeds against YAML-based data contracts, detects breaking schema drift, runs data quality checks, and generates rule-based impact summaries for downstream pipeline owners.
 
 [![CI](https://github.com/allab2/ai-data-contract-guardian/actions/workflows/ci.yml/badge.svg)](https://github.com/allab2/ai-data-contract-guardian/actions/workflows/ci.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 [![Python 3.10+](https://img.shields.io/badge/python-3.10+-blue.svg)](https://www.python.org/downloads/)
 
-> **Portfolio positioning:** This project demonstrates practical data engineering skills around vendor feed validation, schema drift detection, data contracts, data quality monitoring, report generation, and AI-style impact summaries.
+**Problem:** Vendor CSV feeds change without warning — renamed columns, missing fields, bad values — causing pipeline failures and incorrect analytics.
+
+**Solution:** A local-first validation layer that runs *before* production ingestion: contract checks, drift classification, quality rules, and exportable reports.
+
+**Stack:** Python · Pandas · DuckDB · YAML · Streamlit · Pytest · GitHub Actions
+
+**Live repo:** https://github.com/allab2/ai-data-contract-guardian
 
 ---
 
@@ -288,25 +294,23 @@ Vendor feeds change constantly. Contract validation catches issues **before** lo
 
 ---
 
-## Screenshots
+## Dashboard Preview
 
-Pipeline-generated preview images (from real Day 2 validation output):
+Screenshots are captured from the local Streamlit dashboard after running `make dashboard`. See [docs/screenshots/README.md](docs/screenshots/README.md) for capture instructions.
 
-| Preview | Description |
-|---|---|
-| ![Overview](docs/screenshots/streamlit_overview.png) | Issues by severity |
-| ![Schema Drift](docs/screenshots/streamlit_schema_drift.png) | Issues by category |
-| ![Data Quality](docs/screenshots/streamlit_data_quality.png) | Null count by column |
-| ![CLI Output](docs/screenshots/cli_output.png) | CLI summary (Day 2) |
-| ![Markdown Report](docs/screenshots/markdown_report_preview.png) | Markdown report preview |
+| Overview | Schema Drift | Data Quality |
+|:---:|:---:|:---:|
+| ![Dashboard Overview](docs/screenshots/dashboard_overview.png) | ![Schema Drift](docs/screenshots/schema_drift.png) | ![Data Quality](docs/screenshots/data_quality.png) |
 
-Regenerate assets anytime:
+| Contract Details | Raw Data Preview | CLI (Day 2) |
+|:---:|:---:|:---:|
+| ![Contract Details](docs/screenshots/contract_details.png) | ![Raw Data Preview](docs/screenshots/raw_data_preview.png) | ![CLI Day 2 Output](docs/screenshots/cli_day2_output.png) |
 
-```bash
-python scripts/generate_screenshot_assets.py
-```
+![Markdown Report Preview](docs/screenshots/markdown_report_preview.png)
 
-For live Streamlit UI captures, run `make dashboard` and save additional PNGs to `docs/screenshots/`. See [docs/screenshots/README.md](docs/screenshots/README.md).
+> Add PNG files to `docs/screenshots/` using the filenames above. Until then, image links will appear as placeholders on GitHub.
+
+**Portfolio docs:** [Interview guide](docs/INTERVIEW_EXPLANATION.md) · [Resume bullets](docs/RESUME_BULLETS.md) · [LinkedIn draft](docs/LINKEDIN_POST.md) · [Publishing checklist](docs/PUBLISHING.md)
 
 ---
 
