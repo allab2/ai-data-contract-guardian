@@ -1,0 +1,11 @@
+order_id,customer_id,customer_name,order_date,product_name,quantity,unit_price,total_amount,status
+1001,C001,Alice Johnson,2025-06-01,Widget A,3,12.99,38.97,completed
+1002,C002,Bob Smith,2025-06-01,Widget B,1,24.50,24.50,completed
+1003,C003,Carol White,2025-06-01,Gadget X,2,15.75,31.50,pending
+1004,C001,Alice Johnson,2025-06-01,Gadget Y,5,8.00,40.00,completed
+1005,C004,Dave Brown,2025-06-01,Widget A,1,12.99,12.99,shipped
+1006,C005,Eve Davis,2025-06-01,Widget C,10,5.25,52.50,completed
+1007,C002,Bob Smith,2025-06-01,Gadget X,3,15.75,47.25,pending
+1008,C006,Frank Miller,2025-06-01,Widget B,2,24.50,49.00,completed
+1009,C007,Grace Lee,2025-06-01,Gadget Z,1,99.99,99.99,shipped
+1010,C003,Carol White,2025-06-01,Widget A,4,12.99,51.96,completed

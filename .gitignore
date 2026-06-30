@@ -1,0 +1,42 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+dist/
+build/
+.eggs/
+*.egg
+
+# Virtual environments
+.env
+.venv/
+venv/
+env/
+
+# IDE and OS
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+
+# Logs and temp files
+*.log
+*.tmp
+*.temp
+
+# Test and coverage
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Generated processed outputs (keep directory via .gitkeep)
+data/processed/*
+!data/processed/.gitkeep
+
+# Generated reports are created locally at runtime (keep directory via .gitkeep)
+data/reports/*
+!data/reports/.gitkeep

@@ -1,0 +1,84 @@
+contract:
+  name: customer_orders
+  version: "1.0"
+  owner: data-engineering-team
+  description: >
+    Data contract for the daily customer orders feed from the e-commerce platform.
+    This contract defines the expected schema, data types, constraints, and quality
+    thresholds that all incoming order files must satisfy.
+
+schema:
+  columns:
+    - name: order_id
+      dtype: int64
+      nullable: false
+      unique: true
+      description: Unique identifier for each order
+
+    - name: customer_id
+      dtype: object
+      nullable: false
+      unique: false
+      pattern: "^C\\d{3}$"
+      description: Customer identifier in format C### (e.g., C001)
+
+    - name: customer_name
+      dtype: object
+      nullable: false
+      unique: false
+      description: Full name of the customer
+
+    - name: order_date
+      dtype: object
+      nullable: false
+      unique: false
+      date_format: "%Y-%m-%d"
+      description: Date the order was placed (YYYY-MM-DD)
+
+    - name: product_name
+      dtype: object
+      nullable: false
+      unique: false
+      description: Name of the product ordered
+
+    - name: quantity
+      dtype: int64
+      nullable: false
+      unique: false
+      min_value: 1
+      max_value: 500
+      description: Number of units ordered (must be positive)
+
+    - name: unit_price
+      dtype: float64
+      nullable: false
+      unique: false
+      min_value: 0.01
+      description: Price per unit in USD
+
+    - name: total_amount
+      dtype: float64
+      nullable: false
+      unique: false
+      min_value: 0.01
+      description: Total order amount in USD
+
+    - name: status
+      dtype: object
+      nullable: false
+      unique: false
+      allowed_values:
+        - completed
+        - pending
+        - shipped
+        - cancelled
+      description: Current status of the order
+
+quality:
+  min_row_count: 1
+  max_null_pct: 0.05
+  max_duplicate_pct: 0.00
+
+sla:
+  freshness: daily
+  expected_delivery_time: "08:00 UTC"

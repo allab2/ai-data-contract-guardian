@@ -1,0 +1,38 @@
+name: CI
+
+on:
+  push:
+    branches: [main, master]
+  pull_request:
+    branches: [main, master]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Run tests
+        run: pytest tests/ -v
+
+      - name: Run Day 1 pipeline
+        run: python main.py --file data/incoming/customer_orders_day1.csv
+
+      - name: Run Day 2 pipeline
+        run: python main.py --file data/incoming/customer_orders_day2_schema_drift.csv
+
+      - name: Verify reports were generated
+        run: |
+          test -f data/reports/customer_orders_day1_validation_report.json
+          test -f data/reports/customer_orders_day2_schema_drift_validation_report.json

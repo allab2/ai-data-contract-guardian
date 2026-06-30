@@ -1,0 +1,11 @@
+order_id,cust_id,customer_name,order_date,product_name,qty,unit_price,discount_pct,total_amount,order_status,region
+2001,C001,Alice Johnson,06/02/2025,Widget A,2,12.99,0.10,23.38,done,US-East
+2002,C002,Bob Smith,06/02/2025,Widget B,1,24.50,0.00,24.50,done,US-West
+2003,C008,,06/02/2025,Gadget X,3,15.75,0.05,44.89,pending,EU-West
+2004,C003,Carol White,06/02/2025,Gadget Y,-1,8.00,0.00,-8.00,completed,US-East
+2005,C009,Hank Wilson,2025-06-02,Widget C,0,5.25,0.00,0.00,completed,APAC
+2006,C004,Dave Brown,06/02/2025,Widget A,1,12.99,0.15,11.04,shipped,US-East
+2007,C005,Eve Davis,06/02/2025,Widget B,999,24.50,0.00,24475.50,completed,EU-West
+2008,C010,Ivy Zhang,06/02/2025,,2,0.00,0.00,0.00,completed,APAC
+2009,C006,Frank Miller,06/02/2025,Gadget Z,1,99.99,0.20,79.99,done,US-West
+2010,C007,Grace Lee,06/02/2025,Widget A,3,12.99,0.00,38.97,completed,
